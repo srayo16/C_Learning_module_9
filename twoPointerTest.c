@@ -18,23 +18,14 @@ int main()
         printf("%d ", arr[i]);
     }
     printf("\nAfter two pointer:\n");
-    // int temp;
-    // int change;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     // printf("Enter\n");
-    //     temp = arr[i];
-    //     // change = arr[(n - 1) - i];
-    //     // printf("%d\n", arr[(n - 1) - i]);
-    //     arr[i] = arr[(n - 1) - i];
-    //     arr[(n - 1) - i] = temp;
-    // }
-    int temp;
-    for (int i = 0, j = n - 1; i < j; i++, j--)
+    int temp = 0;
+    for (int i = 0; i < n / 2; i++) // i<(n-1)-i
     {
+        // printf("Enter\n");
         temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        // printf("%d\n", arr[(n - 1) - i]);
+        arr[i] = arr[(n - 1) - i];
+        arr[(n - 1) - i] = temp;
     }
 
     for (int i = 0; i < n; i++)
